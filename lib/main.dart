@@ -1,24 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:starter_temp_weather_app/screens/home.dart';
 
-class LoadingScreen extends StatefulWidget {
-  const LoadingScreen({super.key});
-
-  @override
-  State<LoadingScreen> createState() => _LoadingScreenState();
+void main() {
+  runApp(MyApp());
 }
 
-class _LoadingScreenState extends State<LoadingScreen> {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            //TODO:get current location
-          },
-          child: Text("Get Location"),
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Weather App",
+      home: Home(),
     );
   }
 }
