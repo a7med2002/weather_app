@@ -57,6 +57,9 @@ This structure ensures scalability, maintainability, and testability.
 - flutter run
 
 ## 🖼️ Screenshots
+![app_view1](assets/images/app_view1.png)
+
+![app_view1](assets/images/app_view2.png)
 
 ## 🌐 Social Links
 - 👨‍💻 Developer: [ِAhmed Meqdad]
