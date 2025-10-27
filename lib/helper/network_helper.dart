@@ -16,8 +16,7 @@ class NetworkHelper {
     return Future.error(response.statusCode);
   }
 
-  Future<Map<String, dynamic>> getDataByCountry(
-  ) async {
+  Future<Map<String, dynamic>> getDataByCountry() async {
     try {
       http.Response response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
@@ -32,4 +31,14 @@ class NetworkHelper {
       return Future.error("Connection Error: $e");
     }
   }
+
+  Future<Map<String, dynamic>> getDataByHour() async {
+    http.Response response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      var responseBody = jsonDecode(response.body);
+      return responseBody;
+    }
+    return Future.error("Error Getting Data By Hour");
+  }
+
 }
