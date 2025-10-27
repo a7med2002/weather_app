@@ -1,0 +1,1724 @@
+===== D:\Android\kick_lance_project\start_weather_app\android\app\src\debug\AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+===== D:\Android\kick_lance_project\start_weather_app\android\app\src\main\res\drawable\launch_background.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+===== D:\Android\kick_lance_project\start_weather_app\android\app\src\main\res\drawable-v21\launch_background.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?android:colorBackground" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+===== D:\Android\kick_lance_project\start_weather_app\android\app\src\main\res\values\styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== D:\Android\kick_lance_project\start_weather_app\android\app\src\main\res\values-night\styles.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+===== D:\Android\kick_lance_project\start_weather_app\android\app\src\main\AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <application
+        android:label="starter_temp_weather_app"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
+===== D:\Android\kick_lance_project\start_weather_app\android\app\src\profile\AndroidManifest.xml =====
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+===== D:\Android\kick_lance_project\start_weather_app\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json =====
+{
+  "images" : [
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-83.5x83.5@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "Icon-App-1024x1024@1x.png",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json =====
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\helper\color_helper.dart =====
+import 'package:flutter/widgets.dart';
+
+const Color backgroundColor = Color(0xff00132b);
+const Color fontColor = Color(0xff687180);
+const Color whiteColor = Color(0xfffdffff);
+const Color yellowColor = Color(0xffddf335);
+const Color blueColor = Color(0xff054dae);
+const Color blue1Color = Color(0xff0f68f2);
+const Color blue2Color = Color(0xff13baf9);
+===== D:\Android\kick_lance_project\start_weather_app\lib\helper\constants.dart =====
+const String apiKey = "b5cac7179587bc0f64585c5104843206";
+===== D:\Android\kick_lance_project\start_weather_app\lib\helper\network_helper.dart =====
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
+class NetworkHelper {
+  final String url;
+
+  NetworkHelper(this.url);
+
+  Future<Map<String, dynamic>> getData() async {
+    http.Response response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      Map<String, dynamic> data = jsonDecode(response.body);
+      return data;
+    }
+    return Future.error(response.statusCode);
+  }
+
+  Future<Map<String, dynamic>> getDataByCountry() async {
+    try {
+      http.Response response = await http.get(Uri.parse(url));
+      if (response.statusCode == 200) {
+        var responseBody = jsonDecode(response.body);
+        return responseBody;
+      } else {
+        return Future.error(
+          "ُError in fetch Country Weather ${response.statusCode}",
+        );
+      }
+    } catch (e) {
+      return Future.error("Connection Error: $e");
+    }
+  }
+
+  Future<Map<String, dynamic>> getDataByHour() async {
+    http.Response response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      var responseBody = jsonDecode(response.body);
+      return responseBody;
+    }
+    return Future.error("Error Getting Data By Hour");
+  }
+
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\models\user_location.dart =====
+import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
+
+class UserLocation {
+  double latitude = 0.0;
+  double longitude = 0.0;
+
+  UserLocation();
+
+  Future<void> getUserLocation(BuildContext context) async {
+    try {
+      Position p;
+      p = await getCurrentLocation();
+      latitude = p.latitude;
+      longitude = p.longitude;
+    } catch (e) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Field Get Location: $e")));
+    }
+  }
+
+  Future<Position> getCurrentLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    // Test if location services are enabled.
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      return Future.error('Location services are disabled.');
+    }
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        return Future.error('Location permissions are denied');
+      }
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      return Future.error(
+        'Location permissions are permanently denied, we cannot request permissions.',
+      );
+    }
+    return await Geolocator.getCurrentPosition();
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\models\weather.dart =====
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:starter_temp_weather_app/helper/constants.dart';
+import 'package:starter_temp_weather_app/helper/network_helper.dart';
+import 'package:starter_temp_weather_app/models/user_location.dart';
+
+class Weather {
+  late String country;
+  late String city;
+  late String temp;
+  late String weatherState;
+  late String wind;
+  late String humidity;
+  late String clouds;
+  late String weatherStateImg;
+
+  // Weather({
+  //   required this.country,
+  //   required this.city,
+  //   required this.clouds,
+  //   required this.humidity,
+  //   required this.temp,
+  //   required this.weatherState,
+  //   required this.wind,
+  // });
+
+  Future<Map<String, dynamic>> getLocationWeather(BuildContext context) async {
+    UserLocation userLocation = UserLocation();
+    await userLocation.getUserLocation(context);
+    Map<String, dynamic> weatherData;
+
+    try {
+      weatherData = await NetworkHelper(
+        "https://api.openweathermap.org/data/2.5/weather?lat=${userLocation.latitude}&lon=${userLocation.longitude}&appid=$apiKey&units=metric",
+      ).getData();
+
+      final prefs = await SharedPreferences.getInstance();
+      prefs.setString('lastWeather', jsonEncode(weatherData));
+    } catch (e) {
+      final prefs = await SharedPreferences.getInstance();
+      final cashedData = prefs.getString('lastWeather');
+      if (cashedData != null) {
+        weatherData = jsonDecode(cashedData);
+      } else {
+        weatherData = {};
+      }
+    }
+    if (weatherData.isNotEmpty) {
+      if (weatherData.isNotEmpty) {
+        country = weatherData["sys"]["country"].toString();
+        city = weatherData["name"].toString();
+        temp = weatherData["main"]["temp"].toDouble().round().toStringAsFixed(
+          0,
+        );
+        weatherState = weatherData["weather"][0]["main"].toString();
+        wind = weatherData["wind"]["speed"].toString();
+        humidity = weatherData["main"]["humidity"].toString();
+        clouds = weatherData["clouds"]["all"].toString();
+        weatherStateImg = weatherData["weather"][0]["icon"];
+        // weatherStateImg = getWeatherImage(weatherData["weather"][0]["id"]);
+      }
+    }
+    return weatherData;
+  }
+
+  Future<Map<String, dynamic>> getCountryWeather(
+    String countryName,
+    String city,
+  ) async {
+    final Map<String, String> countryCodes = {
+      'Qatar': 'QA',
+      'Palestine': 'PS',
+      'United States': 'US',
+      'Egypt': 'EG',
+      'Jordan': 'JO',
+      'Saudi Arabia': 'SA',
+      'Turkey': 'TR',
+      'Germany': 'DE',
+      'France': 'FR',
+      'United Kingdom': 'GB',
+      'Afghanistan': 'AF',
+      'Albania': 'AL',
+      'Algeria': 'DZ',
+      'Andorra': 'AD',
+      'Angola': 'AO',
+      'Argentina': 'AR',
+      'Armenia': 'AM',
+      'Australia': 'AU',
+      'Austria': 'AT',
+      'Azerbaijan': 'AZ',
+      'Bahamas': 'BS',
+      'Bahrain': 'BH',
+      'Bangladesh': 'BD',
+      'Barbados': 'BB',
+      'Belarus': 'BY',
+      'Belgium': 'BE',
+      'Belize': 'BZ',
+      'Benin': 'BJ',
+      'Bhutan': 'BT',
+      'Bolivia': 'BO',
+      'Bosnia and Herzegovina': 'BA',
+      'Botswana': 'BW',
+      'Brazil': 'BR',
+      'Brunei': 'BN',
+      'Bulgaria': 'BG',
+      'Burkina Faso': 'BF',
+      'Burundi': 'BI',
+      'Cambodia': 'KH',
+      'Cameroon': 'CM',
+      'Canada': 'CA',
+      'Cape Verde': 'CV',
+      'Central African Republic': 'CF',
+      'Chad': 'TD',
+      'Chile': 'CL',
+      'China': 'CN',
+      'Colombia': 'CO',
+      'Comoros': 'KM',
+      'Costa Rica': 'CR',
+      'Croatia': 'HR',
+      'Cuba': 'CU',
+      'Cyprus': 'CY',
+      'Czech Republic': 'CZ',
+      'Denmark': 'DK',
+      'Djibouti': 'DJ',
+      'Dominica': 'DM',
+      'Dominican Republic': 'DO',
+      'Ecuador': 'EC',
+      'El Salvador': 'SV',
+      'Equatorial Guinea': 'GQ',
+      'Eritrea': 'ER',
+      'Estonia': 'EE',
+      'Eswatini': 'SZ',
+      'Ethiopia': 'ET',
+      'Fiji': 'FJ',
+      'Finland': 'FI',
+      'Gabon': 'GA',
+      'Gambia': 'GM',
+      'Georgia': 'GE',
+      'Ghana': 'GH',
+      'Greece': 'GR',
+      'Grenada': 'GD',
+      'Guatemala': 'GT',
+      'Guinea': 'GN',
+      'Guinea-Bissau': 'GW',
+      'Guyana': 'GY',
+      'Haiti': 'HT',
+      'Honduras': 'HN',
+      'Hungary': 'HU',
+      'Iceland': 'IS',
+      'India': 'IN',
+      'Indonesia': 'ID',
+      'Iran': 'IR',
+      'Iraq': 'IQ',
+      'Ireland': 'IE',
+      'Israel': 'IL',
+      'Italy': 'IT',
+      'Ivory Coast': 'CI',
+      'Jamaica': 'JM',
+      'Japan': 'JP',
+      'Kazakhstan': 'KZ',
+      'Kenya': 'KE',
+      'Kiribati': 'KI',
+      'Kuwait': 'KW',
+      'Kyrgyzstan': 'KG',
+      'Laos': 'LA',
+      'Latvia': 'LV',
+      'Lebanon': 'LB',
+      'Lesotho': 'LS',
+      'Liberia': 'LR',
+      'Libya': 'LY',
+      'Liechtenstein': 'LI',
+      'Lithuania': 'LT',
+      'Luxembourg': 'LU',
+      'Madagascar': 'MG',
+      'Malawi': 'MW',
+      'Malaysia': 'MY',
+      'Maldives': 'MV',
+      'Mali': 'ML',
+      'Malta': 'MT',
+      'Mauritania': 'MR',
+      'Mauritius': 'MU',
+      'Mexico': 'MX',
+      'Moldova': 'MD',
+      'Monaco': 'MC',
+      'Mongolia': 'MN',
+      'Montenegro': 'ME',
+      'Morocco': 'MA',
+      'Mozambique': 'MZ',
+      'Myanmar': 'MM',
+      'Namibia': 'NA',
+      'Nepal': 'NP',
+      'Netherlands': 'NL',
+      'New Zealand': 'NZ',
+      'Nicaragua': 'NI',
+      'Niger': 'NE',
+      'Nigeria': 'NG',
+      'North Korea': 'KP',
+      'North Macedonia': 'MK',
+      'Norway': 'NO',
+      'Oman': 'OM',
+      'Pakistan': 'PK',
+      'Panama': 'PA',
+      'Papua New Guinea': 'PG',
+      'Paraguay': 'PY',
+      'Peru': 'PE',
+      'Philippines': 'PH',
+      'Poland': 'PL',
+      'Portugal': 'PT',
+      'Romania': 'RO',
+      'Russia': 'RU',
+      'Rwanda': 'RW',
+      'Saint Kitts and Nevis': 'KN',
+      'Saint Lucia': 'LC',
+      'Saint Vincent and the Grenadines': 'VC',
+      'Samoa': 'WS',
+      'San Marino': 'SM',
+      'Sao Tome and Principe': 'ST',
+      'Senegal': 'SN',
+      'Serbia': 'RS',
+      'Seychelles': 'SC',
+      'Sierra Leone': 'SL',
+      'Singapore': 'SG',
+      'Slovakia': 'SK',
+      'Slovenia': 'SI',
+      'Solomon Islands': 'SB',
+      'Somalia': 'SO',
+      'South Africa': 'ZA',
+      'South Korea': 'KR',
+      'South Sudan': 'SS',
+      'Spain': 'ES',
+      'Sri Lanka': 'LK',
+      'Sudan': 'SD',
+      'Suriname': 'SR',
+      'Sweden': 'SE',
+      'Switzerland': 'CH',
+      'Syria': 'SY',
+      'Taiwan': 'TW',
+      'Tajikistan': 'TJ',
+      'Tanzania': 'TZ',
+      'Thailand': 'TH',
+      'Timor-Leste': 'TL',
+      'Togo': 'TG',
+      'Tonga': 'TO',
+      'Trinidad and Tobago': 'TT',
+      'Tunisia': 'TN',
+      'Turkmenistan': 'TM',
+      'Tuvalu': 'TV',
+      'Uganda': 'UG',
+      'Ukraine': 'UA',
+      'United Arab Emirates': 'AE',
+
+      'Uruguay': 'UY',
+      'Uzbekistan': 'UZ',
+      'Vanuatu': 'VU',
+      'Vatican City': 'VA',
+      'Venezuela': 'VE',
+      'Vietnam': 'VN',
+      'Yemen': 'YE',
+      'Zambia': 'ZM',
+      'Zimbabwe': 'ZW',
+    };
+    String cleanCountryName = countryName
+        .replaceAll(RegExp(r'[^\w\s]'), '')
+        .trim();
+    String formattedCity = city.trim();
+
+    String? countryCode = countryCodes[cleanCountryName];
+
+    String formatApi =
+        "https://api.openweathermap.org/data/2.5/weather?q=$formattedCity,$countryCode&appid=$apiKey&units=metric";
+
+    try {
+      NetworkHelper networkHelper = NetworkHelper(formatApi);
+      Map<String, dynamic> weatherData = await networkHelper.getDataByCountry();
+
+      country = weatherData["sys"]["country"].toString();
+      city = weatherData["name"].toString();
+      temp = weatherData["main"]["temp"].toDouble().toStringAsFixed(0);
+      weatherState = weatherData["weather"][0]["main"].toString();
+      wind = weatherData["wind"]["speed"].toString();
+      humidity = weatherData["main"]["humidity"].toString();
+      clouds = weatherData["clouds"]["all"].toString();
+      weatherStateImg = weatherData["weather"][0]["icon"];
+
+      return weatherData;
+    } catch (e) {
+      return Future.error("Error Fetching Weather Data: $e");
+    }
+  }
+
+  Future<Map<String, dynamic>> getWeatherByHour(BuildContext context) async {
+    UserLocation userLocation = UserLocation();
+    await userLocation.getUserLocation(context);
+    Map<String, dynamic> weatherHourData;
+
+    try {
+      weatherHourData = await NetworkHelper(
+        "https://api.openweathermap.org/data/2.5/forecast?lat=${userLocation.latitude}4&lon=${userLocation.longitude}&appid=$apiKey&units=metric",
+      ).getDataByHour();
+      final prefs = await SharedPreferences.getInstance();
+
+      await prefs.setString('latestWeatherHour', jsonEncode(weatherHourData));
+    } catch (e) {
+      final prefs = await SharedPreferences.getInstance();
+      final cashedData = prefs.getString('latestWeatherHour');
+
+      if (cashedData != null) {
+        return jsonDecode(cashedData);
+      } else {
+        weatherHourData = {};
+      }
+    }
+    return weatherHourData;
+  }
+
+  Future<Map<String, dynamic>> getHourCountryWeather(
+    String countryName,
+    String city,
+  ) async {
+    final Map<String, String> countryCodes = {
+      'Qatar': 'QA',
+      'Palestine': 'PS',
+      'United States': 'US',
+      'Egypt': 'EG',
+      'Jordan': 'JO',
+      'Saudi Arabia': 'SA',
+      'Turkey': 'TR',
+      'Germany': 'DE',
+      'France': 'FR',
+      'United Kingdom': 'GB',
+      'Afghanistan': 'AF',
+      'Albania': 'AL',
+      'Algeria': 'DZ',
+      'Andorra': 'AD',
+      'Angola': 'AO',
+      'Argentina': 'AR',
+      'Armenia': 'AM',
+      'Australia': 'AU',
+      'Austria': 'AT',
+      'Azerbaijan': 'AZ',
+      'Bahamas': 'BS',
+      'Bahrain': 'BH',
+      'Bangladesh': 'BD',
+      'Barbados': 'BB',
+      'Belarus': 'BY',
+      'Belgium': 'BE',
+      'Belize': 'BZ',
+      'Benin': 'BJ',
+      'Bhutan': 'BT',
+      'Bolivia': 'BO',
+      'Bosnia and Herzegovina': 'BA',
+      'Botswana': 'BW',
+      'Brazil': 'BR',
+      'Brunei': 'BN',
+      'Bulgaria': 'BG',
+      'Burkina Faso': 'BF',
+      'Burundi': 'BI',
+      'Cambodia': 'KH',
+      'Cameroon': 'CM',
+      'Canada': 'CA',
+      'Cape Verde': 'CV',
+      'Central African Republic': 'CF',
+      'Chad': 'TD',
+      'Chile': 'CL',
+      'China': 'CN',
+      'Colombia': 'CO',
+      'Comoros': 'KM',
+      'Costa Rica': 'CR',
+      'Croatia': 'HR',
+      'Cuba': 'CU',
+      'Cyprus': 'CY',
+      'Czech Republic': 'CZ',
+      'Denmark': 'DK',
+      'Djibouti': 'DJ',
+      'Dominica': 'DM',
+      'Dominican Republic': 'DO',
+      'Ecuador': 'EC',
+      'El Salvador': 'SV',
+      'Equatorial Guinea': 'GQ',
+      'Eritrea': 'ER',
+      'Estonia': 'EE',
+      'Eswatini': 'SZ',
+      'Ethiopia': 'ET',
+      'Fiji': 'FJ',
+      'Finland': 'FI',
+      'Gabon': 'GA',
+      'Gambia': 'GM',
+      'Georgia': 'GE',
+      'Ghana': 'GH',
+      'Greece': 'GR',
+      'Grenada': 'GD',
+      'Guatemala': 'GT',
+      'Guinea': 'GN',
+      'Guinea-Bissau': 'GW',
+      'Guyana': 'GY',
+      'Haiti': 'HT',
+      'Honduras': 'HN',
+      'Hungary': 'HU',
+      'Iceland': 'IS',
+      'India': 'IN',
+      'Indonesia': 'ID',
+      'Iran': 'IR',
+      'Iraq': 'IQ',
+      'Ireland': 'IE',
+      'Israel': 'IL',
+      'Italy': 'IT',
+      'Ivory Coast': 'CI',
+      'Jamaica': 'JM',
+      'Japan': 'JP',
+      'Kazakhstan': 'KZ',
+      'Kenya': 'KE',
+      'Kiribati': 'KI',
+      'Kuwait': 'KW',
+      'Kyrgyzstan': 'KG',
+      'Laos': 'LA',
+      'Latvia': 'LV',
+      'Lebanon': 'LB',
+      'Lesotho': 'LS',
+      'Liberia': 'LR',
+      'Libya': 'LY',
+      'Liechtenstein': 'LI',
+      'Lithuania': 'LT',
+      'Luxembourg': 'LU',
+      'Madagascar': 'MG',
+      'Malawi': 'MW',
+      'Malaysia': 'MY',
+      'Maldives': 'MV',
+      'Mali': 'ML',
+      'Malta': 'MT',
+      'Mauritania': 'MR',
+      'Mauritius': 'MU',
+      'Mexico': 'MX',
+      'Moldova': 'MD',
+      'Monaco': 'MC',
+      'Mongolia': 'MN',
+      'Montenegro': 'ME',
+      'Morocco': 'MA',
+      'Mozambique': 'MZ',
+      'Myanmar': 'MM',
+      'Namibia': 'NA',
+      'Nepal': 'NP',
+      'Netherlands': 'NL',
+      'New Zealand': 'NZ',
+      'Nicaragua': 'NI',
+      'Niger': 'NE',
+      'Nigeria': 'NG',
+      'North Korea': 'KP',
+      'North Macedonia': 'MK',
+      'Norway': 'NO',
+      'Oman': 'OM',
+      'Pakistan': 'PK',
+      'Panama': 'PA',
+      'Papua New Guinea': 'PG',
+      'Paraguay': 'PY',
+      'Peru': 'PE',
+      'Philippines': 'PH',
+      'Poland': 'PL',
+      'Portugal': 'PT',
+      'Romania': 'RO',
+      'Russia': 'RU',
+      'Rwanda': 'RW',
+      'Saint Kitts and Nevis': 'KN',
+      'Saint Lucia': 'LC',
+      'Saint Vincent and the Grenadines': 'VC',
+      'Samoa': 'WS',
+      'San Marino': 'SM',
+      'Sao Tome and Principe': 'ST',
+      'Senegal': 'SN',
+      'Serbia': 'RS',
+      'Seychelles': 'SC',
+      'Sierra Leone': 'SL',
+      'Singapore': 'SG',
+      'Slovakia': 'SK',
+      'Slovenia': 'SI',
+      'Solomon Islands': 'SB',
+      'Somalia': 'SO',
+      'South Africa': 'ZA',
+      'South Korea': 'KR',
+      'South Sudan': 'SS',
+      'Spain': 'ES',
+      'Sri Lanka': 'LK',
+      'Sudan': 'SD',
+      'Suriname': 'SR',
+      'Sweden': 'SE',
+      'Switzerland': 'CH',
+      'Syria': 'SY',
+      'Taiwan': 'TW',
+      'Tajikistan': 'TJ',
+      'Tanzania': 'TZ',
+      'Thailand': 'TH',
+      'Timor-Leste': 'TL',
+      'Togo': 'TG',
+      'Tonga': 'TO',
+      'Trinidad and Tobago': 'TT',
+      'Tunisia': 'TN',
+      'Turkmenistan': 'TM',
+      'Tuvalu': 'TV',
+      'Uganda': 'UG',
+      'Ukraine': 'UA',
+      'United Arab Emirates': 'AE',
+
+      'Uruguay': 'UY',
+      'Uzbekistan': 'UZ',
+      'Vanuatu': 'VU',
+      'Vatican City': 'VA',
+      'Venezuela': 'VE',
+      'Vietnam': 'VN',
+      'Yemen': 'YE',
+      'Zambia': 'ZM',
+      'Zimbabwe': 'ZW',
+    };
+    String cleanCountryName = countryName
+        .replaceAll(RegExp(r'[^\w\s]'), '')
+        .trim();
+    String formattedCity = city.trim();
+
+    String? countryCode = countryCodes[cleanCountryName];
+
+    String formatApi =
+        "https://api.openweathermap.org/data/2.5/forecast?q=$formattedCity,$countryCode&appid=$apiKey&units=metric";
+
+    try {
+      NetworkHelper networkHelper = NetworkHelper(formatApi);
+      Map<String, dynamic> weatherData = await networkHelper.getDataByCountry();
+
+      return weatherData;
+    } catch (e) {
+      return Future.error("Error Fetching Weather Data: $e");
+    }
+  }
+
+  // String getWeatherImage(int weatherCode) {
+  //   if (weatherCode <= 232) {
+  //     return "storm";
+  //   } else if (weatherCode <= 531) {
+  //     return "rainy";
+  //   } else if (weatherCode <= 622) {
+  //     return "sun";
+  //   } else if (weatherCode >= 801 && weatherCode <= 804) {
+  //     return "cloudy";
+  //   } else {
+  //     return "weather";
+  //   }
+  // }
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\screens\country_picker.dart =====
+import 'package:country_state_city_picker/country_state_city_picker.dart';
+import 'package:flutter/material.dart';
+
+class CountryPicker extends StatefulWidget {
+  const CountryPicker({super.key});
+
+  @override
+  State<CountryPicker> createState() => _CountryPickerState();
+}
+
+class _CountryPickerState extends State<CountryPicker> {
+  String? countryValue;
+  String? stateValue;
+  String? cityValue;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              SelectState(
+                onCountryChanged: (value) {
+                  setState(() {
+                    countryValue = value;
+                  });
+                },
+                onStateChanged: (value) {
+                  setState(() {
+                    stateValue = value;
+                  });
+                },
+                onCityChanged: (value) {
+                  setState(() {
+                    cityValue = value;
+                  });
+                  print("selected Country: $countryValue");
+                  print("selected State: $stateValue");
+                  print("selected City: $cityValue");
+                  Navigator.pop(context, {
+                    'country': countryValue,
+                    'state': stateValue,
+                    'city': cityValue,
+                  });
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\screens\home.dart =====
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:starter_temp_weather_app/helper/color_helper.dart';
+import 'package:starter_temp_weather_app/models/weather.dart';
+import 'package:starter_temp_weather_app/screens/country_picker.dart';
+import 'package:starter_temp_weather_app/widgets/custom_hour_weather.dart';
+import 'package:starter_temp_weather_app/widgets/custom_percent_column.dart';
+
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  String? selectedCountry;
+  String? selectedState;
+  String? selectedCity;
+
+  @override
+  Widget build(BuildContext context) {
+    Weather weather = Weather();
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      body: SafeArea(
+        child: RefreshIndicator(
+          onRefresh: () => selectedCountry != null
+              ? weather.getCountryWeather(selectedCountry!, selectedCity!)
+              : weather.getLocationWeather(context),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Stack(
+                  children: [
+                    Container(
+                      height: MediaQuery.of(context).size.height / 1.24,
+                      margin: EdgeInsets.all(12),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: blueColor,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(80),
+                          bottomRight: Radius.circular(80),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(24),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [blue2Color, blue1Color],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(70),
+                          bottomRight: Radius.circular(70),
+                        ),
+                      ),
+                      child: FutureBuilder(
+                        future: selectedCountry != null
+                            ? weather.getCountryWeather(
+                                selectedCountry!,
+                                selectedCity!,
+                              )
+                            : weather.getLocationWeather(context),
+
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState ==
+                              ConnectionState.waiting) {
+                            return Center(child: CircularProgressIndicator());
+                          } else if (snapshot.hasError) {
+                            return Center(child: Text("${snapshot.error}"));
+                          } else if (!snapshot.hasData) {
+                            return Center(child: Text("No Data .."));
+                          } else {
+                            return Column(
+                              spacing: 12,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: OutlinedButton(
+                                        onPressed: () async {
+                                          final result = await Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  CountryPicker(),
+                                            ),
+                                          );
+                                          if (result != null &&
+                                              result is Map<String, String?>) {
+                                            setState(() {
+                                              selectedCountry =
+                                                  result['country'];
+                                              selectedState = result['state'];
+                                              selectedCity = result['city'];
+                                            });
+                                          }
+                                        },
+                                        style: OutlinedButton.styleFrom(
+                                          iconColor: whiteColor,
+                                          side: BorderSide(
+                                            color: whiteColor.withOpacity(0.5),
+                                          ),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadiusGeometry.circular(
+                                                  50,
+                                                ),
+                                          ),
+                                          padding: EdgeInsets.all(0),
+                                        ),
+                                        child: Icon(Icons.menu, size: 24),
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.location_on,
+                                          color: whiteColor,
+                                        ),
+                                        Text(
+                                          snapshot.data!["sys"]["country"]
+                                              .toString(),
+                                          style: TextStyle(
+                                            color: whiteColor,
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(
+                                        Icons.swap_calls_rounded,
+                                        color: whiteColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 140,
+                                  child: OutlinedButton(
+                                    onPressed: () {},
+                                    style: OutlinedButton.styleFrom(
+                                      iconColor: whiteColor,
+                                      side: BorderSide(
+                                        color: whiteColor.withOpacity(0.5),
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadiusGeometry.circular(50),
+                                      ),
+                                      padding: EdgeInsets.all(12),
+                                    ),
+                                    child: Row(
+                                      spacing: 8,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          "●",
+                                          style: TextStyle(
+                                            color: yellowColor,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                        Text(
+                                          snapshot.data!["name"].toString(),
+                                          style: TextStyle(color: whiteColor),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                CachedNetworkImage(
+                                  imageUrl:
+                                      "https://openweathermap.org/img/wn/${snapshot.data!["weather"][0]["icon"]}@4x.png",
+                                  width: 250,
+                                  height: 220,
+                                  placeholder: (context, url) => Center(
+                                    child: CircularProgressIndicator(),
+                                  ),
+                                  errorWidget: (context, url, error) =>
+                                      Icon(Icons.error),
+                                ),
+                                Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          snapshot.data!["main"]["temp"]
+                                              .toDouble()
+                                              .toStringAsFixed(0),
+                                          style: TextStyle(
+                                            color: whiteColor,
+                                            fontSize: 120,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          textHeightBehavior:
+                                              TextHeightBehavior(
+                                                applyHeightToFirstAscent: false,
+                                                applyHeightToLastDescent: false,
+                                              ),
+                                        ),
+                                        Text(
+                                          "°",
+                                          style: TextStyle(
+                                            fontSize: 60,
+                                            color: whiteColor.withOpacity(0.7),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      snapshot.data!["weather"][0]["main"]
+                                          .toString(),
+                                      style: TextStyle(
+                                        color: whiteColor,
+                                        fontSize: 26,
+                                      ),
+                                    ),
+                                    Text(
+                                      DateFormat(
+                                        "EEEE, dd MMMM",
+                                      ).format(DateTime.now()),
+                                      style: TextStyle(
+                                        color: whiteColor.withOpacity(0.7),
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Divider(color: whiteColor.withOpacity(0.4)),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    CustomPercentColumn(
+                                      icon: Icons.wind_power_outlined,
+                                      title: snapshot.data!["wind"]["speed"]
+                                          .toString(),
+                                      subTitle: 'Wind',
+                                    ),
+                                    CustomPercentColumn(
+                                      icon: Icons.water_drop,
+                                      title: snapshot.data!["main"]["humidity"]
+                                          .toString(),
+                                      subTitle: 'Humidity',
+                                    ),
+                                    CustomPercentColumn(
+                                      icon: Icons.cloud,
+                                      title: snapshot.data!["clouds"]["all"]
+                                          .toString(),
+                                      subTitle: 'Clouds',
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            );
+                          }
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
+                  child: Column(
+                    spacing: 12,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Today",
+                            style: TextStyle(
+                              color: whiteColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "7 days",
+                                style: TextStyle(color: fontColor),
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                color: fontColor,
+                                size: 18,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      FutureBuilder(
+                        future: selectedCountry != null
+                            ? weather.getHourCountryWeather(
+                                selectedCountry!,
+                                selectedCity!,
+                              )
+                            : weather.getWeatherByHour(context),
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState ==
+                              ConnectionState.waiting) {
+                            return CircularProgressIndicator();
+                          } else if (snapshot.hasError) {
+                            return Text("Error: ${snapshot.error}");
+                          } else if (!snapshot.hasData) {
+                            return Text("No Data ..");
+                          } else {
+                            List<dynamic> forecastList = snapshot.data!['list'];
+                            final todayForecast = forecastList.take(8).map((
+                              item,
+                            ) {
+                              final time = item['dt_txt'].substring(11, 16);
+                              final temp = item['main']['temp'].round();
+                              final iconUrl =
+                                  "https://openweathermap.org/img/wn/${item['weather'][0]['icon']}@2x.png";
+                              return {
+                                'temp': temp,
+                                'time': time,
+                                'iconUrl': iconUrl,
+                              };
+                            }).toList();
+                            return SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: todayForecast
+                                    .map(
+                                      (forecast) => CustomHourWeather(
+                                        temp: forecast['temp'],
+                                        image: forecast['iconUrl'],
+                                        hour: forecast['time'],
+                                      ),
+                                    )
+                                    .toList(),
+                              ),
+                            );
+                          }
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\widgets\custom_hour_weather.dart =====
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:starter_temp_weather_app/helper/color_helper.dart';
+
+class CustomHourWeather extends StatelessWidget {
+  final int temp;
+  final String image;
+  final String hour;
+  const CustomHourWeather({
+    super.key,
+    required this.temp,
+    required this.image,
+    required this.hour,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8),
+      margin: EdgeInsets.only(right: 16, bottom: 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: fontColor),
+      ),
+      child: Column(
+        children: [
+          Text(
+            "$temp°",
+            style: TextStyle(color: whiteColor, fontWeight: FontWeight.bold),
+          ),
+          CachedNetworkImage(
+            imageUrl: image,
+            width: 40,
+            height: 40,
+            placeholder: (context, url) =>
+                Center(child: CircularProgressIndicator()),
+            errorWidget: (context, url, error) => Icon(Icons.error),
+          ),
+          Text(
+            hour,
+            style: TextStyle(color: whiteColor.withOpacity(0.7), fontSize: 12),
+          ),
+        ],
+      ),
+    );
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\widgets\custom_percent_column.dart =====
+import 'package:flutter/material.dart';
+import 'package:starter_temp_weather_app/helper/color_helper.dart';
+
+class CustomPercentColumn extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subTitle;
+  const CustomPercentColumn({
+    super.key,
+    required this.icon,
+    required this.title,
+    required this.subTitle,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      spacing: 6,
+      children: [
+        Icon(icon, color: whiteColor),
+        Text(
+          title,
+          style: TextStyle(
+            color: whiteColor,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          subTitle,
+          style: TextStyle(color: whiteColor.withOpacity(0.7), fontSize: 12),
+        ),
+      ],
+    );
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\lib\main.dart =====
+import 'package:flutter/material.dart';
+import 'package:starter_temp_weather_app/screens/home.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Weather App",
+      home: Home(),
+    );
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json =====
+{
+  "images" : [
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_16.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_64.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_128.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_1024.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+===== D:\Android\kick_lance_project\start_weather_app\test\widget_test.dart =====
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:starter_temp_weather_app/main.dart';
+
+void main() {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
+
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
+
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+  });
+}
+===== D:\Android\kick_lance_project\start_weather_app\web\manifest.json =====
+{
+    "name": "starter_temp_weather_app",
+    "short_name": "starter_temp_weather_app",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
+===== D:\Android\kick_lance_project\start_weather_app\analysis_options.yaml =====
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
+===== D:\Android\kick_lance_project\start_weather_app\pubspec.yaml =====
+name: starter_temp_weather_app
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  geolocator: ^14.0.2
+  http: ^1.5.0
+  intl: ^0.20.2
+  country_state_city_picker: ^1.2.8
+  shared_preferences: ^2.5.3
+  cached_network_image: ^3.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
