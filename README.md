@@ -44,21 +44,21 @@ This structure ensures scalability, maintainability, and testability.
 
 ## 🚀 How to Run the Project
 1. **Clone the repository**  
-git clone https://github.com/your-username/start_weather_app.git
+- git clone https://github.com/your-username/start_weather_app.git
 
 2. **Install dependencies** 
-flutter pub get
+- flutter pub get
 
 3.	**Add your OpenWeatherMap API key**
-Replace the value in : lib/helper/constants.dart
-const String apiKey = "YOUR_API_KEY_HERE";
+- Replace the value in : lib/helper/constants.dart
+- const String apiKey = "YOUR_API_KEY_HERE";
 
 4. **Run the app**
-flutter run
+- flutter run
 
 ## 🖼️ Screenshots
 
 ## 🌐 Social Links
 - 👨‍💻 Developer: [ِAhmed Meqdad]
 - 📧 Email: [ahmd2002mqdad@gamil.com]
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/ahmed-meqdad)
+- 💼 LinkedIn: [linkedin.com/in/ahmed-meqdad](https://www.linkedin.com/in/ahmed-meqdad)
