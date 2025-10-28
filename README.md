@@ -44,7 +44,7 @@ This structure ensures scalability, maintainability, and testability.
 
 ## 🚀 How to Run the Project
 1. **Clone the repository**  
-- git clone https://github.com/a7med2002/start_weather_app.git
+- git clone [https://github.com/a7med2002/weather_app.git](https://github.com/a7med2002/weather_app.git)
 
 2. **Install dependencies** 
 - flutter pub get
