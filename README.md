@@ -56,12 +56,24 @@ This structure ensures scalability, maintainability, and testability.
 4. **Run the app**
 - flutter run
 
+---
+
 ## 🖼️ Screenshots
 ![app_view1](assets/images/app_view1.png)
 
 ![app_view1](assets/images/app_view2.png)
 
+---
+
+## 📦 Download APK  
+
+You can download the latest version of the **Weather App** APK directly from Google Drive:  
+
+👉 [**Download Weather App (APK)**](https://drive.google.com/file/d/1f8CQ0fckuK4Rp4tmSkiAejuv-Mt2n10F/view?usp=sharing)  
+
+---
+
 ## 🌐 Social Links
 - 👨‍💻 Developer: [ِAhmed Meqdad]
 - 📧 Email: [ahmd2002mqdad@gamil.com]
-- 💼 LinkedIn: [linkedin.com/in/ahmed-meqdad](https://www.linkedin.com/in/ahmed-meqdad)
+- 💼 LinkedIn: [linkedin.com/in/ahmed-meqdad](https://www.linkedin.com/in/ahmedmeqdad0)
